@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900">
+      <defs><linearGradient id="g" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#ead9cb"/><stop offset="1" stop-color="#fbf7f2"/></linearGradient></defs>
+      <rect width="1200" height="900" rx="40" fill="url(#g)"/><circle cx="1020" cy="140" r="100" fill="#b47a50" opacity=".14"/><circle cx="150" cy="740" r="170" fill="#4d3027" opacity=".12"/>
+      <g><ellipse cx="700" cy="300" rx="92" ry="118" fill="#8f5d45"/><path d="M610 300 Q625 130 720 135 Q815 150 790 330 L760 250 Q700 205 635 250Z" fill="#201714"/><path d="M670 315 Q700 335 730 315" fill="none" stroke="#5a3028" stroke-width="8" stroke-linecap="round"/><circle cx="700" cy="292" r="7" fill="#8d3438"/><path d="M590 445 Q700 365 810 445 L845 760 L555 760Z" fill="#171312"/><path d="M550 530 Q450 410 380 350" stroke="#8f5d45" stroke-width="32" stroke-linecap="round"/><path d="M390 350 L275 260" stroke="#d8a06b" stroke-width="9"/><path d="M275 260 L305 248" stroke="#d8a06b" stroke-width="5"/></g>
+      <text x="80" y="105" font-family="Georgia,serif" font-size="46" fill="#241b18">Makeup Detail</text>
+      <text x="82" y="145" font-family="Arial,sans-serif" font-size="18" letter-spacing="4" fill="#241b18" opacity=".65">DEMO PORTFOLIO WORK</text>
+      <text x="80" y="840" font-family="Arial,sans-serif" font-size="16" letter-spacing="3" fill="#241b18" opacity=".55">AYASHA'S VANITY • BEAUTY • MAKEUP • ARTISTRY</text>
+    </svg>
