@@ -4,7 +4,7 @@ const path = location.pathname.replace(/\/+$/, "") || "/";
 const nav = `
 <header class="site-header">
   <div class="container nav">
-    <a class="brand" href="/"><img src="/assets/logo.svg" alt="Ayasha's Vanity logo"></a>
+    <a class="brand" href="/"><img src="/assets/logo.svg" alt="Ayesha's logo"></a>
     <button class="menu" aria-label="Menu">☰</button>
     <nav class="nav-links">
       <a href="/">Home</a><a href="/about">About</a><a href="/services">Services</a>
@@ -18,12 +18,12 @@ const nav = `
 const footer = `
 <footer class="footer">
   <div class="container footer-grid">
-    <div><div class="footer-brand"><img src="/assets/logo-light.svg" alt="Ayasha's Vanity logo"></div><p class="muted">Beauty, makeup artistry and professional training — crafted with care.</p></div>
+    <div><div class="footer-brand"><img src="/assets/logo-light.svg" alt="Ayesha's logo"></div><p class="muted">Beauty, makeup artistry and professional training — crafted with care.</p></div>
     <div><b>Explore</b><a href="/about">About</a><a href="/services">Services</a><a href="/work">Our Work</a><a href="/gallery">Gallery</a></div>
     <div><b>Specialties</b><a href="/bridal">Bridal Makeup</a><a href="/academy">Academy</a><a href="/book">Appointments</a></div>
     <div><b>Connect</b><a id="instagramLink" href="https://instagram.com/" target="_blank" rel="noreferrer">Instagram</a><a href="/contact">WhatsApp & Contact</a><a href="/book">Book Appointment</a></div>
   </div>
-  <div class="container footer-bottom">© ${new Date().getFullYear()} Ayasha's Vanity. All rights reserved.</div>
+  <div class="container footer-bottom">© ${new Date().getFullYear()} Ayesha's. All rights reserved.</div>
 </footer>
 <a class="wa" id="waFloat" href="#" aria-label="WhatsApp">WA</a>`;
 
@@ -64,7 +64,7 @@ function layout(content){
 async function setupWhatsApp(){
   try{
     const r=await fetch("/api/config"); const c=await r.json();
-    const link=`https://wa.me/${c.whatsappNumber}?text=${encodeURIComponent("Hello Ayasha's Vanity ✨ I'd like to enquire about an appointment.")}`;
+    const link=`https://wa.me/${c.whatsappNumber}?text=${encodeURIComponent("Hello Ayesha's ✨ I'd like to enquire about an appointment.")}`;
     const w=document.querySelector("#waFloat"); if(w) w.href=link;
     const ig=document.querySelector("#instagramLink"); if(ig) ig.href=`https://instagram.com/${c.instagramUsername}`;
   }catch{}
@@ -77,7 +77,7 @@ layout(`
   <h1>Your Beauty,<br><em>Perfected.</em></h1>
   <p>Premium bridal makeup, occasion glam and beauty artistry created to feel like the most beautiful version of you.</p>
   <div class="actions"><a class="btn btn-dark" href="/book">Book Appointment</a><a class="btn btn-light" href="/work">Explore Our Work</a></div></div>
-  <div class="hero-visual reveal">${image(heroImg,"Ayasha's Vanity makeup artistry")}<div class="floating float-top"><b>500+</b><br><span class="muted">Happy clients</span></div><div class="floating float-bottom"><b>Bridal • Glam • Academy</b><br><span class="muted">Personalized artistry</span></div></div>
+  <div class="hero-visual reveal">${image(heroImg,"Ayesha's makeup artistry")}<div class="floating float-top"><b>500+</b><br><span class="muted">Happy clients</span></div><div class="floating float-bottom"><b>Bridal • Glam • Academy</b><br><span class="muted">Personalized artistry</span></div></div>
 </section>
 <section class="container stats reveal"><div class="stat"><strong>500+</strong><span class="muted">Happy Clients</span></div><div class="stat"><strong>100+</strong><span class="muted">Bridal Looks</span></div><div class="stat"><strong>5+</strong><span class="muted">Years Experience</span></div><div class="stat"><strong>1:1</strong><span class="muted">Personal Attention</span></div></section>
 
@@ -93,7 +93,7 @@ layout(`
 
 <section class="section dark-section"><div class="container"><div class="section-head reveal"><div><div class="eyebrow">Latest Work</div><h2 class="serif">See the transformation.</h2></div><a class="btn btn-light" href="/work">View All Work</a></div><div id="homeWork" class="work-grid"></div></div></section>
 
-<section class="section"><div class="container"><div class="cta reveal"><div class="eyebrow">Ayasha's Vanity Academy</div><h2>Turn your passion into your profession.</h2><p class="muted">Learn practical makeup and beauty skills through structured, hands-on training.</p><a class="btn btn-dark" href="/academy">Explore Academy</a></div></div></section>
+<section class="section"><div class="container"><div class="cta reveal"><div class="eyebrow">Ayesha's Academy</div><h2>Turn your passion into your profession.</h2><p class="muted">Learn practical makeup and beauty skills through structured, hands-on training.</p><a class="btn btn-dark" href="/academy">Explore Academy</a></div></div></section>
 
 <section class="section"><div class="container"><div class="section-head reveal"><div><div class="eyebrow">Client Love</div><h2>Beautiful words.</h2></div></div><div class="cards"><article class="card reveal"><div class="stars">★★★★★</div><p class="testimonial">“My bridal look felt elegant, comfortable and completely me. The attention to detail was incredible.”</p><b>— Bridal Client</b></article><article class="card reveal"><div class="stars">★★★★★</div><p class="testimonial">“Professional from consultation to the final look. I felt so confident.”</p><b>— Occasion Client</b></article><article class="card reveal"><div class="stars">★★★★★</div><p class="testimonial">“The academy is practical and easy to follow. Every class feels personal.”</p><b>— Academy Student</b></article></div></div></section>
 `);
@@ -106,7 +106,7 @@ layout(`<section class="page-hero"><div class="container reveal"><div class="eye
 
 function about(){
 innerPage("The artist behind the glow.","About Ayasha","A beauty experience built around artistry, confidence and personal attention.",`
-<section class="section"><div class="container about-grid"><div class="reveal">${image(portrait,"Ayasha's Vanity artist")}</div><div class="copy reveal"><div class="eyebrow">Our Philosophy</div><h2>Enhance. Never hide.</h2><p>Ayasha's Vanity is built on one simple belief: makeup should make you feel more like yourself, not less. We combine refined technique with a calm, personal experience.</p><p>Whether you're a bride, attending an event or learning the craft, every detail is considered with care.</p><a class="btn btn-dark" href="/book">Work With Us</a></div></div></section>
+<section class="section"><div class="container about-grid"><div class="reveal">${image(portrait,"Ayesha's artist")}</div><div class="copy reveal"><div class="eyebrow">Our Philosophy</div><h2>Enhance. Never hide.</h2><p>Ayesha's is built on one simple belief: makeup should make you feel more like yourself, not less. We combine refined technique with a calm, personal experience.</p><p>Whether you're a bride, attending an event or learning the craft, every detail is considered with care.</p><a class="btn btn-dark" href="/book">Work With Us</a></div></div></section>
 <section class="section dark-section"><div class="container"><div class="cards">${["Personalized Consultation","Premium Techniques","Hygiene First"].map((x,i)=>`<article class="card reveal"><div class="icon">${["✦","◇","♡"][i]}</div><h3>${x}</h3><p class="muted">${["Your features, outfit, event and comfort guide the final look.","Modern techniques with a timeless, photograph-friendly finish.","A clean, professional setup is part of every appointment."][i]}</p></article>`).join("")}</div></div></section>`);
 }
 
@@ -152,7 +152,7 @@ try{
 function work(){
 innerPage("Our work, in motion.","Portfolio • Social Feed","Real looks, real transformations and the latest beauty content in one place.",`
 <section class="section dark-section"><div class="container"><div class="notice" style="margin-bottom:25px">The Work feed is API-ready. Add the professional Instagram/Meta credentials in <b>.env</b> and connect the current Graph API endpoint in <b>server.js</b>. Until then, the included demo feed keeps the page working.</div><div id="workGrid" class="work-grid"></div></div></section>
-<section class="section"><div class="container cta"><div class="eyebrow">Follow the journey</div><h2>More looks. More behind the scenes.</h2><p class="muted">Follow Ayasha's Vanity on Instagram for new reels and daily updates.</p><a id="igCta" class="btn btn-dark" target="_blank" rel="noreferrer" href="https://instagram.com/">Open Instagram</a></div></section>
+<section class="section"><div class="container cta"><div class="eyebrow">Follow the journey</div><h2>More looks. More behind the scenes.</h2><p class="muted">Follow Ayesha's on Instagram for new reels and daily updates.</p><a id="igCta" class="btn btn-dark" target="_blank" rel="noreferrer" href="https://instagram.com/">Open Instagram</a></div></section>
 <div class="modal" id="videoModal"><div class="modal-box"><button class="close" id="closeVideo">×</button><video id="videoPlayer" controls playsinline></video></div></div>`);
 loadWork("workGrid",20);
 fetch("/api/config").then(r=>r.json()).then(c=>{document.getElementById("igCta").href=`https://instagram.com/${c.instagramUsername}`}).catch(()=>{});
@@ -169,7 +169,7 @@ function closeVideo(){const m=document.getElementById("videoModal"),v=document.g
 
 function gallery(){
 const pics=[photos.bridal,photos.sari,photos.brideRed,photos.sariPortrait,photos.artist,photos.hero];
-innerPage("A gallery of beauty.","Gallery","A visual collection of bridal, glam and artistry.",`<section class="section"><div class="container gallery">${pics.map((p,i)=>image(p,`Ayasha's Vanity gallery ${i+1}`)).join("")}</div></section>`);
+innerPage("A gallery of beauty.","Gallery","A visual collection of bridal, glam and artistry.",`<section class="section"><div class="container gallery">${pics.map((p,i)=>image(p,`Ayesha's gallery ${i+1}`)).join("")}</div></section>`);
 }
 function reviews(){
 innerPage("Beautiful words.","Reviews","The experience matters as much as the final look.",`<section class="section"><div class="container cards">${["“My bridal look felt elegant, comfortable and completely me. I received so many compliments.”","“The consultation made everything easy. The final look photographed beautifully and lasted all evening.”","“The academy gave me confidence and practical skills I could actually use with clients.”","“Professional, calm and incredibly detail-oriented. I would book again in a heartbeat.”","“I wanted natural glam and that's exactly what I got — polished without feeling heavy.”","“The whole experience felt personal from start to finish.”"].map((x,i)=>`<article class="card reveal"><div class="stars">★★★★★</div><p class="testimonial">${x}</p><b>— Verified Client</b></article>`).join("")}</div></section>`);
@@ -178,7 +178,7 @@ innerPage("Beautiful words.","Reviews","The experience matters as much as the fi
 function contact(){
 innerPage("Let's create something beautiful.","Contact","For appointments, bridal enquiries, academy information or collaborations.",`
 <section class="section"><div class="container split"><div class="reveal"><img class="contact-image" src="${photos.sariPortrait}" alt="Elegant bridal beauty" loading="lazy"></div><div class="copy"><div class="eyebrow">Get in touch</div><h2>We'd love to hear from you.</h2><p>For the fastest response, send us a WhatsApp message with your preferred service and date.</p><div class="actions"><a id="contactWa" class="btn btn-gold" href="#">WhatsApp Us</a><a class="btn btn-light" href="/book">Book Appointment</a></div></div><div class="card"><h3>Opening Hours</h3><p>Monday – Saturday<br>10:00 AM – 7:00 PM</p><hr><h3>Services</h3><p>Bridal • Occasion • Hair • Beauty • Academy</p><hr><h3>Social</h3><p><a id="contactIg" href="#" target="_blank" rel="noreferrer">@ayashasvanity</a></p></div></div></section>`);
-fetch("/api/config").then(r=>r.json()).then(c=>{document.getElementById("contactWa").href=`https://wa.me/${c.whatsappNumber}?text=${encodeURIComponent("Hello Ayasha's Vanity ✨ I'd like to enquire about an appointment.")}`;document.getElementById("contactIg").href=`https://instagram.com/${c.instagramUsername}`}).catch(()=>{});
+fetch("/api/config").then(r=>r.json()).then(c=>{document.getElementById("contactWa").href=`https://wa.me/${c.whatsappNumber}?text=${encodeURIComponent("Hello Ayesha's ✨ I'd like to enquire about an appointment.")}`;document.getElementById("contactIg").href=`https://instagram.com/${c.instagramUsername}`}).catch(()=>{});
 }
 
 function book(){

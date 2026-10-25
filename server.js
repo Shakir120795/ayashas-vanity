@@ -54,7 +54,7 @@ app.post("/api/booking", (req, res) => {
 
   const number = process.env.WHATSAPP_NUMBER || "919999999999";
   const text = [
-    "Hello Ayasha's Vanity ✨",
+    "Hello Ayesha's ✨",
     "",
     "I'd like to book an appointment.",
     `Name: ${name}`,
@@ -76,5 +76,5 @@ app.get("*splat", (_req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`Ayasha's Vanity running at http://localhost:${PORT}`);
+  console.log(`Ayesha's running at http://localhost:${PORT}`);
 });
